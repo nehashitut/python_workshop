@@ -7,7 +7,7 @@ Created on Wed May 04 12:45:21 2016
 
 import pandas as pd
 import numpy as np
-
+from pandas import DataFrame
 import os
 os.chdir('E:\Work\Python\Python Trainings')
 #Download the data from following link
