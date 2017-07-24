@@ -73,8 +73,8 @@ data=data.assign(success_suicide_1=data['suicide']+data['success'])
 data.query("success_suicide==2").shape[0]
 
 ### Dropping columns
-data.drop('success_suicide_1',axis=1) 
-data.drop('success_suicide_1',axis=1,inplace=True) 
+data.drop('success_suicide',axis=1) 
+data.drop('success_suicide',axis=1,inplace=True) 
 
 ### Aggregations and manipulations using apply and map
 #map: map a function to each element of a series object
@@ -86,7 +86,7 @@ def get_label(x):
     else:
         return 'Not Severe'
 data['nkill'].map(get_label)
-#You can use lambda functions as well (if else follows as special form when used with lambdas )
+#You can use lambda functions as well (if else follows a special form when used with lambdas )
 data['nkill'].map(lambda x: "Severe" if x>5 else "Not Severe")
 # We can use apply to use a function row wise or column wise
 # Let's write a function to label an incident that was both successful and suicidal
@@ -136,7 +136,7 @@ data.groupby(["Local",'suicide']).agg({'nkill':np.mean,'nwound':np.sum}).reset_i
 ## Use the file Python Data Manipulation_1.docx and attempt question1
 
 #String manipulations
-st=pd.read_csv("F:\\Work\\Jigsaw Academy\\Data Scientist Course\\Data Science Redo\\Live Classes\\Data Manipulation Visualisation\\Strings.csv")
+st=pd.read_csv("E:\Work\Python\Python Trainings\Python Advanced\Data\Strings.csv")
 
 print st.head()
 
