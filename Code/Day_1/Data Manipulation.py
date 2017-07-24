@@ -111,6 +111,11 @@ def get_label(row):
 data.apply(get_label,axis=1)
 
 data['Local']=data.apply(get_label,axis=1)
+
+## Use the dataset called comey.csv and answer:
+    # Did the verbosity of Comey's responses differ by party?
+    # On an average did, Democrats asked longer questions compared to Republicans or Independent candidates
+
 #### Group by aggregations
 # Grouping by one or more variable(s) and aggregating one column
 # Grouping by one or more variable(s) and aggregating multiple columns in same way
